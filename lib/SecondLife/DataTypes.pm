@@ -29,10 +29,13 @@ sub slregion($) { SecondLife::Region->new(@_); }
 
     say $null_rot->s; # 1.0
     
+    use SecondLife::DataTypes qw( slvec );
     my $cyan = SecondLife::Vector->new("<0,1,1>");
-    my $rec = slvector '<1,0,0>';
+    my $rec = slvec '<1,0,0>';
     
+    use SecondLife::DataTypes qw( slregion );
     my $region = SecondLife::Region->new("Dew Drop (236544, 242944)");
+    my $region = slregion 'Dew Drop (236544, 242944)';
 
 =head1 DESCRIPTION
 
