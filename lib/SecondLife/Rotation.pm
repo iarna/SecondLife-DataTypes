@@ -3,7 +3,7 @@ package SecondLife::Rotation;
 use strict;
 use warnings;
 use overload
-	'""' => "stringify";
+    '""' => "stringify";
 use Regexp::Common qw/ RE_num_real /;
 use Scalar::Util qw( blessed );
 

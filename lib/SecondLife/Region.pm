@@ -1,7 +1,7 @@
 package SecondLife::Region;
 # ABSTRACT: Second Life's region identifiers (a name, plus a location in the 2d grid of sims)
 use Any::Moose;
-use overload q{""} => \&stringify;	
+use overload q{""} => \&stringify;
 use Regexp::Common qw/ RE_num_int /;
 
 has 'name' => ( is=>'rw', isa=>'Str' );
