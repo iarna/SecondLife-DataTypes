@@ -38,10 +38,10 @@ __PACKAGE__->meta->make_immutable;
 
     use SecondLife::DataTypes;
     
-    my $vec = SecondLife::Vector->new( "<1,2,3>" );           # same
-    my $vec = SecondLife::Vector->new( x=>$1, y=>$2, z=>$3 ); # same
+    my $vec  = SecondLife::Vector->new( "<1,2,3>" );
+    my $vec2 = SecondLife::Vector->new( x=>1, y=>2, z=>3 ); # same
     
-    say "$vec"; # Print out <1, 2, 3>
+    print "$vec\n"; # Print out <1, 2, 3>
 
 =head1 DESCRIPTION
 

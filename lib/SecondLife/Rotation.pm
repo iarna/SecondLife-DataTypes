@@ -168,15 +168,15 @@ foreach (qw( unit conjugate inverse normalize multiply dot plus minus power nega
 
     use SecondLife::DataTypes qw( slrot slvec );
 
-    my $rot = SecondLife::Rotation->new( "<0,0,0,1>" ); # create a null rotation
-    my $rot = slrot "<0,0,0,1>";                                   # the same
-    my $rot = SecondLife::Rotation->new( x=>0, y=>0, z=>0, s=>1 ); # the same
-    my $rot = SecondLife::Rotation->new( Math::Quaternion->new( 1, 0, 0, 0 ) ); # The same
+    my $rot1 = SecondLife::Rotation->new( "<0,0,0,1>" ); # create a null rotation
+    my $rot2 = slrot "<0,0,0,1>";                                   # the same
+    my $rot3 = SecondLife::Rotation->new( x=>0, y=>0, z=>0, s=>1 ); # the same
+    my $rot4 = SecondLife::Rotation->new( Math::Quaternion->new( 1, 0, 0, 0 ) ); # The same
 
     # Rotate the specified vector by the rotation and return the new vector
-    my $vec = $rot->rotate_vector( slvec "<1,2,3>" ); 
+    my $vec = $rot1->rotate_vector( slvec "<1,2,3>" ); 
 
-    print "$rot\n"; # Prints <0, 0, 0, 1>
+    print "$rot1\n"; # Prints <0, 0, 0, 1>
 
 =head1 DESCRIPTION
 

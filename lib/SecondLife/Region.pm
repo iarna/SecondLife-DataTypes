@@ -51,7 +51,7 @@ __PACKAGE__->meta->make_immutable;
     
     sub psgi_handler {
         my $req = Plack::Request->new( shift );
-        my $region = SecondLife::Region->new( $req->header('X-SecondLife-Region'} );
+        my $region = SecondLife::Region->new( $req->header('X-SecondLife-Region') );
         my $res = $req->new_response( 200 );
         $res->content_type('text/plain');
         $res->body(

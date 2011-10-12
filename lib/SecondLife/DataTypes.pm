@@ -22,12 +22,12 @@ sub slregion($) { SecondLife::Region->new(@_); }
     use SecondLife::Rotation;
     my $null_rot = SecondLife::Rotation->new("<0,0,0,1.0>");
 
-    or
+    # or
 
     use SecondLife::DataTypes qw( slrot );
-    my $null_rot = slrot "<0,0,0,1.0>";
+    my $null_rot2 = slrot "<0,0,0,1.0>";
 
-    say $null_rot->s; # 1.0
+    print $null_rot2->s,"\n"; # 1.0
     
     use SecondLife::DataTypes qw( slvec );
     my $cyan = SecondLife::Vector->new("<0,1,1>");
@@ -35,7 +35,7 @@ sub slregion($) { SecondLife::Region->new(@_); }
     
     use SecondLife::DataTypes qw( slregion );
     my $region = SecondLife::Region->new("Dew Drop (236544, 242944)");
-    my $region = slregion 'Dew Drop (236544, 242944)';
+    my $region2 = slregion 'Dew Drop (236544, 242944)'; # same
 
 =head1 DESCRIPTION
 
